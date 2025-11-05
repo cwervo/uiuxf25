@@ -1,1 +1,1 @@
-# uiuxf25
+# UI/UX Fundamentals class for SVA IxD Fall 2025

@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans+Mono:wght@100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+body {
+  background-color: #123;
+  color: #DDD;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 16px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  line-height: 1.6;
+  max-width: 1200px;
+}
+
+.title {
+  font-size: 1.4rem;
+}
+
+summary {
+    cursor: pointer;
+}
+
+details > summary { list-style-type: '↦️'; }
+
+details[open] > summary { list-style-type: '↧'; }
+
+details {
+    border: 1px solid gray;
+    border-radius: 26px;
+    padding: 0.5rem;
+}
+
+details[open] > summary { margin-bottom: 0.5rem; }
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px; /* Add some space after headings */
+}
+
+h1 { font-size: 1.8em; /* Larger font size for main heading */ }
+
+h2 { font-size: 1.5em; }
+
+h3 { font-size: 1.2em; }
+
+/* Improve readability for paragraphs and list items */
+p, li { margin-bottom: 10px; }
+
+.bold {
+  font-weight: 700;
+}
+
+.italicize {
+  font-style: italic;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.float {
+  position: absolute;
+}
+
+a {
+  color: cyan;
+  word-wrap: break-word; /* Prevent long URLs from breaking layout */
+}
+
+a:visited {
+  color: magenta;
+}
+
+a:hover {
+  color: #7FDBFF;
+  letter-spacing: 1px;
+}
+
+#homepageLink {
+  font-size: 1.2em;
+  text-decoration: underline;
+  margin-bottom: 20px;
+}
+
+
+a[href="#"] {
+  color: #999;
+}
+
+a[href="#"]::after {
+  content: " (coming soon)";
+  font-size: 0.8em;
+  color: #999;
+}
+
+
+.todo::before {
+  content: '⚠️ TODO: ';
+}
+
+iframe {
+  width: 100%;
+  height: 600px;
+}
+
+.todo {
+  background-color: gold;
+  color: navy;
+  font-size: 1.2rem;
+  padding: 5px;
+  margin: 10px 0;
+}
+
+/* ====== Table styles ===== */
+caption {
+  text-decoration: underline;
+  font-size: 1.2em;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+table {
+  max-width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
+  border-collapse: collapse;
+}
+
+table.stylize {
+  margin: 0 auto;
+  text-align: left;
+  width: 100%;
+}
+
+table.stylize > tbody > tr > td:nth-child(1) {
+  width: auto; /* Allow cells to adjust based on content */
+}
+
+table.stylize thead {
+  text-decoration: underline;
+}
+
+table.stylize th,
+table.stylize > tbody > tr > td {
+  padding: 8px;
+  border-bottom: 1px solid #456; /* Add lines between rows for better readability */
+}
+
+/* Responsive table for mobile */
+@media screen and (max-width: 600px) {
+  table.stylize, table.stylize thead, table.stylize tbody, table.stylize th, table.stylize td, table.stylize tr {
+    display: block;
+  }
+  
+  table.stylize thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  
+  table.stylize tr {
+    margin-bottom: 15px;
+  }
+  
+  table.stylize td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+  
+  table.stylize td:before {
+    content: attr(data-label);
+    position: absolute;
+    left: 6px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+  }
+}
+
+/* ===== Typography ===== */
+.ibm-plex-mono-thin {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 100;
+  font-style: normal;
+}
+
+.ibm-plex-mono-extralight {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.ibm-plex-mono-light {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ibm-plex-mono-regular {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ibm-plex-mono-medium {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ibm-plex-mono-semibold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.ibm-plex-mono-bold {
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.sans {
+  font-family: "IBM Plex Sans";
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ===== Print Styles ===== */
+@media print {
+  @page {
+    size: Letter portrait;
+    margin: 0;
+    outline: 20px dashed magenta;
+  }
+  body {
+    font-size: 10pt;
+    margin: 2.2cm;
+    margin-right: 4cm;
+    margin-bottom: 3cm;
+  }
+
+  a, a:visited {
+    color: navy;
+  }
+
+  table.stylize th,
+  table.stylize > tbody > tr > td {
+    padding: 0 0.2cm;
+  }
+
+  h1, h2, h3, h4, h5 {
+    page-break-after: avoid;
+  }
+
+  .hideOnPrint {
+    display: none;
+  }
+}
+
+/* ===== Responsive Design ===== */
+@media screen and (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  .container {
+    padding: 3% 5%;
+    max-width: 1200px;
+  }
+
+  #homepageLink {
+    font-size: 1.5em;
+  }
+
+  h1 {
+    font-size: 2.5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.5em;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    color: #456;
+    background-color: #DDD;
+  }
+  a {
+    color: #0074D9;
+  }
+  a:hover {
+    color: #001f3f;
+    letter-spacing: 1px;
+  }
+}
