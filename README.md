@@ -1,1 +1,1 @@
-# UI/UX Fundamentals class for SVA IxD Fall 2025
+# Interaction Design History class for SVA IxD Spring 2026

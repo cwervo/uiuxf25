@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UI/UX Fundamentals</title>
+    <title>Interaction Design History</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div class="container">
-    <h1>UI / UX Fundamentals Fall 2025 | Week 1 | November 5, 2025</h1>
+    <h1>Interaction Design History Spring 2026 | Week 1 | March 9, 2026</h1>
 
     <h2>Agenda</h2>
 
@@ -16,60 +16,55 @@
         <li>Introductions</li>
         <li>Course Overview</li>
         <li>Syllabus overview</li>
-        <li>CLI overview</li>
+        <li>Paper Interfaces and Camera Input</li>
     </ul>
 
-    <h3>Computing History</h3>
+    <h3>Syllabus Overview</h3>
+
     <ul>
-        <li><a href="https://history.user-interface.io">The History of User Interfaces</a></li>
-        <li><a href="https://www.pingdom.com/blog/retro-delight-gallery-of-early-computers-1940s-1960s/">Early computing (1940's - 1960's)</a></li>
-        <li><a href="http://www.catb.org/esr/writings/taouu/html/ch02s02.html">Command Line Interfaces</a></li>
-        <li><a href="https://vt100.net/docs/vt100-ug/chapter3.html">Basic VT100 Terminals</a></li>
-        <li><a href="https://www.freecodecamp.org/news/the-command-line-1fdbc692b3bf/">Brief example of command line interaction</a></li>
+        <li><a href="./assets/syllabus">Syllabus</a></li>
+    </ul>
+
+    <h3>The Eye of the Machine &amp; Ubiquitous Computing</h3>
+    <ul>
+        <li><a href="https://en.wikipedia.org/wiki/Trojan_Room_coffee_pot">The 1991 Trojan Room Coffee Pot (The First Webcam)</a></li>
+        <li><a href="https://www.lri.fr/~mbl/Stanford/CS477/papers/Weiser-SciAm.pdf">Mark Weiser's "The Computer for the 21st Century"</a></li>
+        <li>Discussion: Ubiquitous computing paradigms</li>
+        <li>Discussion: Remote presence and latency</li>
+        <li>Discussion: The camera as an active sensor vs. a passive recorder</li>
     </ul>
 
     <hr />
     <h3>15 minute break</h3>
     <hr />
 
-    <h3>Emulating Early Interfaces</h3>
+    <h3>Physical Craft: Paper Interfaces</h3>
     <ul>
-        <li><a href="https://mac.getutm.app">UTM</a></li>
-        <li><a href="https://archive.org/details/ms-dos-6.22_dvd">MS DOS</a></li>
-        <li><a href="https://www.geeksforgeeks.org/techtips/dos-commands/">MS DOS Commands Guide</a></li>
-        <li><a href="https://www.youtube.com/watch?v=sTGOJryn9iA">YT video showing more advanced MS DOS Usage</a></li>
+        <li>Building a basic low-fidelity tangible UI</li>
+        <li>Understanding physical affordances in paper</li>
+        <li>Creating high-contrast markers for camera tracking</li>
+    </ul>
+    
+    <p><strong>Craft:</strong> Print and follow <a href="https://cutfoldtemplates.com/templates/09.pdf" target="_blank">this tutorial</a> from <a href="http://cutandfoldtemplate.com" target="_blank">cutandfoldtemplate.com</a>.</p>
+
+    <h3>Digital Logic: Google Teachable Machine</h3>
+    <ul>
+        <li><a href="https://teachablemachine.withgoogle.com/" target="_blank">Google Teachable Machine</a></li>
+        <li>How a webcam translates the 3D world into a 2D matrix</li>
+        <li>Training a model to recognize physical states in the classroom</li>
     </ul>
 
-        Let's try <code>ECHO HELLO</code>, <code>DIR</code>, <code>DIR /?</code> and <code>QBASIC</code> to see how the command line and text based interfaces worked.
-        In QBASIC we can try writing a simple program like:
-        <pre>
-        PRINT "HELLO, WORLD!"
-        </pre>
-
-        To exit QBASIC, press <code>Option + F</code> to open the File menu, then press <code>X</code> to exit.
-
-    <h3>Modern CLI Interfaces</h3>
-    <ul>
-        <li><a href="https://shotstack.io/learn/how-to-use-ffmpeg/">How to use FFmpeg</a></li>
-        <li><a href="https://antonz.org/git-by-example/">Git by Example</a></li>
-    </ul>
-
-    <h3>Final notes</h3> 
-      <ul>
-        <li><a href="https://www.sri.com/hoi/computer-mouse-and-interactive-computing/">The introduction of the mouse</a></li>
-        <li><a href="https://www.sri.com/case-study/how-a-90-minute-presentation-became-the-catalyst-to-the-modern-world-of-personal-computing/">Mother of all demos</a></li>
-        <li><a href="https://dougengelbart.org/content/view/162/">Keyset (keyboard + three-button mouse combo, left and right)</a></li>
-      </ul>
-
+    <p>Let's use our new paper interfaces to teach the computer to "see." Train a simple model to recognize physical states in the classroom (e.g., “you have your hand up” vs “no hand”). Try training your model to recognize 3 distinct states:</p>
+    <pre>
+    1. Paper mechanism state 1
+    2. Paper mechanism state 2
+    3. Hand up (or other classroom state)
+    </pre>
 
     <h3>Homework</h3>
     <ul>
-        <li>Design a simple command line interface for an application (e.g. a text based music player, todo list app) of your choosing.
-            Use a black background and white monospace text for the interface (see syllabus for an example)</li>
-        <li><a href="https://www.lucasfcosta.com/blog/ux-patterns-cli-tools">UX Patterns for CLI Tools</a></li>
-        <li><a href="https://clig.dev/#human-first-design">Command Line Interface Guidelines | Human First Design</a></li>
-        <li><a href="https://clig.dev/#ease-of-discovery">Command Line Interface Guidelines | Ease of Discovery</a></li>
-        <li><a href="https://clig.dev/#simple-parts-that-work-together">Command Line Interface Guidelines | Simple Parts That Work Together</a></li>
+        <li><strong>Assignment:</strong> Make a Teachable Machine Demo with 6 states.</li>
+        <li><strong>Reading:</strong> Mark Weiser, <a href="https://www.lri.fr/~mbl/Stanford/CS477/papers/Weiser-SciAm.pdf" target="_blank">"The Computer for the 21st Century" (1991)</a></li>
     </ul>
     </div>
   </body>
